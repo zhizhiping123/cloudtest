@@ -1,0 +1,19 @@
+server:
+  port: 12000
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zhizhiping123/cloudconfig.git
+  rabbitmq:
+    host: 104.168.165.147
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
+

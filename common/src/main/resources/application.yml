@@ -1,0 +1,37 @@
+server:
+  port: 8800
+spring:
+  application:
+    name: common
+  data:
+    mongodb:
+      host: 104.168.165.147
+      port: 27017
+      database: zzp
+  rabbitmq:
+    host: 104.168.165.147
+    port: 5672
+    listener:
+      simple:
+        acknowledge-mode: manual
+    publisher-confirms: true
+    cache:
+      channel:
+        size: 100
+    template:
+      exchange: topic
+jwt:
+  config:
+    id: 123
+    userName: zzp
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9098/eureka/
+  instance:
+    prefer-ip-address: true
+ # datasource:
+    #driver-class-name: com.mysql.jdbc.Driver
+   # data-username: root
+    #data-password: root
+   # url: jdbc:mysql://104.168.165.147/test?useUnicode=true&characterEncoding=utf8
