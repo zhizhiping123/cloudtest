@@ -4,6 +4,7 @@ import com.netflix.discovery.converters.Auto;
 import com.netflix.loadbalancer.IRule;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/test")
+@RefreshScope
 public class BaseController {
     @Value("${name}")
     private String name;
